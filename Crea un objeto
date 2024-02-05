@@ -1,0 +1,23 @@
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def obtener_informacion(self):
+        return f"Nombre: {self.nombre}, Edad: {self.edad}"
+
+    def celebrar_cumpleanios(self):
+        self.edad += 1
+        return "¡Feliz cumpleaños! Ahora tienes {} años.".format(self.edad)
+
+# Crear una instancia de la clase Persona
+persona_ejemplo = Persona(nombre="Juan", edad=25)
+
+# Acceder a atributos
+print("Información inicial:", persona_ejemplo.obtener_informacion())
+
+# Llamar a un método
+print(persona_ejemplo.celebrar_cumpleanios())
+
+# Verificar el cambio después del cumpleaños
+print("Información después del cumpleaños:", persona_ejemplo.obtener_informacion())
